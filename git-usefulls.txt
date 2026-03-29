@@ -5,7 +5,7 @@ git rebase -i --root
 In the editor, change only the first two lines from pick to edit, save, close.
 
 When Git stops at commit 1, run:
-GIT_COMMITTER_NAME="Your Name" GIT_COMMITTER_EMAIL="new@email.com" git commit --amend --no-edit --author="Your Name new@email.com"
+GIT_COMMITTER_NAME="Your Name" GIT_COMMITTER_EMAIL="new@email.com" git commit --amend --no-edit --author="Your Name <new@email.com>"
 git rebase --continue
 
 When it stops at commit 2, run the same amend command again, then:
