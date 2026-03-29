@@ -1,0 +1,149 @@
+https://www.youtube.com/watch?v=nclT5Oo8fHY
+Envirtonment:
+
+
+angular developemtn:
+extenstions installed::
+Vira theme
+Typescript Importer
+Angular Language Service
+Code Spell Checker
+Auto rename tag
+Path intellisense
+Prettier - code formatter
+GitHub Theme
+
+PortableGit:
+download portablegit
+
+The last step is loading bash and telling it to use a custom HOME directory.
+
+1. Create a new directory called home\portable\ in the folder that you extracted PortableGit to. eg. c:\PortableGit\home\portable
+
+2 Next, create a .bat in the main PortableGit folder to launch bash to use our custom HOME directory.  Say file name is mintty.bat in c:\PortableGit\mintty.bat
+bat file contents:
+
+set HOME=%~dsp0home/portable
+set "MSYSTEM=MINGW64"
+start %~dsp0usr/bin/mintty /bin/bash --login -i
+
+double click the bat fie
+
+
+
+setting shell prompt:
+location of git-prompt:
+C:\Users\arvind.kumar23\home\tools\PortableGit\mingw64\share\git\completion
+
+
+portable Vs code:
+
+download vs code zip file, unzip it. Create a 'data' folder. 
+
+set up CSCODE_HOME eenv and add it to path.
+
+when Code is launched first time, data get populated.
+// example is C:\Users\arvind.kumar23\home\tools\vscode\data\user-data\User
+
+
+settings.json
+//  "HOME" is where bashrc etc will live
+add the following to it:
+	// shell profiles
+	  "terminal.integrated.profiles.windows": {
+		"GitBash": {
+		  "path": "C:\\Users\\arvind.kumar23\\home\\tools\\portableGit\\bin\\bash.exe",
+           "args": ["--login", "-i"],
+           "env": {
+                "HOME": C:\\Users\\arvind.kumar23\\home\tools\\portableGit\\home\\portable" // Set your custom home directory here
+           },
+		  "icon": "terminal-bash"
+		}
+	  },
+	  "terminal.integrated.defaultProfile.windows": "GitBash"
+	  // Enable format on save
+	  "editor.formatOnSave": true,
+
+	  // Set Prettier as the default formatter for all languages (optional, can be language-specific)
+	  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	  // Language-specific settings to ensure Prettier is used for Angular files
+	  "[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  },
+	  "[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	  }
+	  
+
+
+
+{
+  "window.autoDetectColorScheme": true,
+
+  // shell profiles
+  "terminal.integrated.profiles.windows": {
+    "GitBash": {
+      "path": "C:/Users/arvind.kumar23/root/bin/git/bin/bash.exe",
+      "args": ["--login", "-i"],
+      "icon": "terminal-bash",
+    },
+  },
+  "terminal.integrated.defaultProfile.windows": "GitBash",
+
+  // Enable format on save
+  "editor.formatOnSave": true,
+
+  // Set Prettier as the default formatter for all languages (optional, can be language-specific)
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Language-specific settings to ensure Prettier is used for Angular files
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+}
+
+
+
+specify windows path in bash script:
+example:
+cd '/c/Program Files/Git/etc/profile.d'
+
+specify git branch:
+source ~/../etc/profile.d/git-prompt.sh
+export PS1='\w$(__git_ps1 "(%s%)") \$ '
+alias zgrep='grep --exclude-dir=node_modules'
+alias zs='npm start'
+alias ng18='npx @angular/cli@18'
+alias ng='ng18'
+alias gitk='git checkout'
+alias npxs='npx eslint'
+
+
+recommended command for git bash shell:
+export PS1="\w\$(__git_ps1 ' (%s)') \$ "
+
+// thow path relative to home use cap W:
+export PS1="\W\$(__git_ps1 ' (%s)') \$ "

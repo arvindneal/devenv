@@ -1,0 +1,25 @@
+source ~/../etc/profile.d/git-prompt.sh
+export PS1="\W\$(__git_ps1 ' (%s)') \$ "
+
+# Git commit-as alias for Arvind
+# Use: gca -m "message" [other git commit flags]
+gcp() {
+  git -c user.name="Arvin" -c user.email="arvin-noreply@github.com" commit "$@"
+}
+alias sr='source'
+alias ca='cd /c/Users/arvind.kumar23/root/dev'
+alias zgrep='grep --exclude-dir=node_modules'
+alias ns='npm start'
+alias ni='npm install'
+alias nb='npm run build'
+alias ng18='npx @angular/cli@18'
+alias ng='ng18'
+alias gk='git checkout'
+alias gr='git reset --hard'
+alias gs='git status'
+alias gl='git log'
+
+alias npxs='npx eslint'
+alias op='code . -r'
+alias ex='cd /c/Users/arvind.kumar23/root/dev/ang/ex'
+alias cl='rm -rf dist node_modules'
