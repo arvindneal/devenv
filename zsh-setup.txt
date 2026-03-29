@@ -1,0 +1,22 @@
+export PATH=".:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+autoload -Uz compinit
+compinit
+compdef _files java
+# Keep java's default completion, but allow file completion with ./ prefix
+zstyle ':completion:*:*:java:*' file-patterns '*:all-files'
+# Git commit-as alias for Arvind
+# Use: gca -m "message" [other git commit flags]
+gca() {
+  git -c user.name="Arvind" -c user.email="arvindneal@gmail.com" commit "$@"
+}
+setopt autolist automenu
+alias jvc21='javac --release 21'
+alias mnb='mvn clean package'
+alias mnd='mvn clean package -DskipTests'
+rsc='/Users/arvindkumar/dev/ang/angular-complete-guide-course-resources/code-snapshots'
+export PATH=".:$PATH"
