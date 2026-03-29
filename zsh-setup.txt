@@ -12,7 +12,7 @@ zstyle ':completion:*:*:java:*' file-patterns '*:all-files'
 # Git commit-as alias for Arvind
 # Use: gca -m "message" [other git commit flags]
 gca() {
-  git -c user.name="Arvind" -c user.email="arvindneal@gmail.com" commit "$@"
+  git -c user.name="Arvind" -c user.email="emailId" commit "$@"
 }
 setopt autolist automenu
 alias jvc21='javac --release 21'
