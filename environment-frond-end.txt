@@ -61,6 +61,12 @@ add the following to it:
 		}
 	  },
 	  "terminal.integrated.defaultProfile.windows": "GitBash"
+
+  // fonts
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
+  "window.zoomLevel": 0.5,
+  
 	  // Enable format on save
 	  "editor.formatOnSave": true,
 
@@ -100,6 +106,11 @@ add the following to it:
   },
   "terminal.integrated.defaultProfile.windows": "GitBash",
 
+  // fonts
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
+  "window.zoomLevel": 0.5,
+  
   // Enable format on save
   "editor.formatOnSave": true,
 
