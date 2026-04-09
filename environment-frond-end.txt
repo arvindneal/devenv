@@ -62,7 +62,7 @@ add the following to it:
 	  },
 	  "terminal.integrated.defaultProfile.windows": "GitBash"
 
-  // fonts
+  angular apttern to show contents with 
   "editor.fontSize": 16,
   "terminal.integrated.fontSize": 14,
   "window.zoomLevel": 0.5,
