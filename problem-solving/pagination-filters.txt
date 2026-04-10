@@ -194,3 +194,119 @@ Specific filter types (dropdown, date range)?
 Or integration with a particular backend (Spring Boot, .NET, Node.js)?
 
 
+I am using pagination, sorting and filters.  When user enters input in a filter I should send the first page?
+
+Yes, that's the correct and standard behavior.When the user changes any filter (search input, dropdown, date, etc.), you should always reset to the first page (pageIndex = 0 or page = 1 depending on your API).Why you should reset to first page on filter change:Filters change the result set → the current page (e.g., page 5) may no longer make sense.
+It gives the best user experience — user sees the most relevant results from the top.
+This is how almost all professional apps work (Google, Amazon, GitHub, admin panels, etc.).
+
+est Practice ImplementationHere’s the cleanest way to do it in your component:
+
+// In your DataTableComponent
+
+applyFilter(key: string, value: any) {
+  this.filters[key] = value;
+
+  // ✅ IMPORTANT: Reset to first page whenever filter changes
+  this.pageIndex.set(0);
+
+  // Optional: Reset paginator UI as well (if using MatPaginator)
+  if (this.paginator) {
+    this.paginator.pageIndex = 0;
+  }
+
+  this.loadData();        // or use debounce if it's a text input
+}
+
+For text/search inputs, it's better to add a small debounce:
+
+
+private filterSubject = new Subject<void>();
+
+constructor() {
+  this.filterSubject.pipe(debounceTime(300)).subscribe(() => {
+    this.pageIndex.set(0);
+    this.loadData();
+  });
+}
+
+onSearchInput(event: any) {
+  this.filters['search'] = event.target.value.trim();
+  this.filterSubject.next();   // debounced call
+}
+
+private filterSubject = new Subject<void>();
+
+constructor() {
+  this.filterSubject.pipe(debounceTime(300)).subscribe(() => {
+    this.pageIndex.set(0);
+    this.loadData();
+  });
+}
+
+onSearchInput(event: any) {
+  this.filters['search'] = event.target.value.trim();
+  this.filterSubject.next();   // debounced call
+}
+
+Full Recommended Pattern (Updated)
+
+// When any filter changes
+applyFilter(key: string, value: any) {
+  if (value === '' || value === null || value === undefined) {
+    delete this.filters[key];   // clean up empty filters
+  } else {
+    this.filters[key] = value;
+  }
+
+  this.resetToFirstPage();
+  this.loadData();
+}
+
+private resetToFirstPage() {
+  this.pageIndex.set(0);
+  
+  // Sync with Material Paginator
+  if (this.paginator) {
+    this.paginator.pageIndex = 0;
+  }
+}
+
+// For sorting (optional - you can also reset on sort)
+onSortChange() {
+  this.resetToFirstPage();   // or keep current page - depends on UX preference
+  this.loadData();
+}
+
+Summary – What You Should Do:Action
+Should Reset to Page 1?
+Reason
+Typing in search box
+Yes
+New results
+Changing dropdown filter
+Yes
+New results
+Changing date range
+Yes
+New results
+Changing sort column
+Usually Yes
+Most common
+Changing page size
+No
+Stay on same relative position if possible
+Clicking "Clear Filters"
+Yes
+Obvious
+
+Rule of thumb:
+→ Any time the data set changes (filters), reset to page 1.
+→ Only pagination and page size change should not reset the page.Would you like me to show you a complete clean component with:Proper filter handling (with debounce for search)
+Reset to first page logic
+Sync with MatPaginator
+Clear all filters button
+
+Just say yes and I’ll give you the full updated code.
+
+
