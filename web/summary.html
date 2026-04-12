@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batch Id - 444203</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background-color: #f4c542;
+        color: #000;
+        text-align: center;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .batch-info {
+        background-color: #f4c542;
+        padding: 10px 15px;
+        font-weight: bold;
+        color: #000;
+        font-size: 15px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      .label {
+        font-weight: bold;
+        width: 180px;
+        background-color: #f9f9f9;
+      }
+
+      .amount-header {
+        background-color: #f4c542;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .amount-table th {
+        background-color: #f4c542;
+        color: #000;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .amount-table td {
+        text-align: right;
+      }
+
+      .amount-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .total-row {
+        font-weight: bold;
+        background-color: #f0f0f0;
+      }
+
+      .negative {
+        color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">Batch Id - 444203</div>
+
+      <!-- Batch Information -->
+      <div class="batch-info">Batch Information</div>
+
+      <table>
+        <tr>
+          <td class="label">Carrier:</td>
+          <td>BNSF</td>
+          <td class="label">Status:</td>
+          <td>Ready for approval</td>
+        </tr>
+        <tr>
+          <td class="label">Claim Type:</td>
+          <td>Payable Adjust Verification</td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td class="label">Description:</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td class="label">Acct. Month:</td>
+          <td>12</td>
+          <td class="label">Acct. Year:</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td class="label">Processed By:</td>
+          <td></td>
+          <td class="label">Contract Number:</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="label">Invoice Number:</td>
+          <td></td>
+          <td class="label">Invoice Date:</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <!-- Amount Summary -->
+      <div class="batch-info">Amount Summary</div>
+
+      <table class="amount-table">
+        <thead>
+          <tr>
+            <th style="width: 120px; text-align: left">Amounts</th>
+            <th>Units</th>
+            <th>Claimed</th>
+            <th>Accrued</th>
+            <th>Settled</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left">Accrued</td>
+            <td>0</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">Unaccrued</td>
+            <td>6</td>
+            <td class="negative">-$2,430.00</td>
+            <td>$0.00</td>
+            <td class="negative">-$2,430.00</td>
+            <td class="negative">-$2,430.00</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">Reject</td>
+            <td>0</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+          </tr>
+          <tr class="total-row">
+            <td style="text-align: left">Total</td>
+            <td>6</td>
+            <td class="negative">-$2,430.00</td>
+            <td>$0.00</td>
+            <td class="negative">-$2,430.00</td>
+            <td class="negative">-$2,430.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

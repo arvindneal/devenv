@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>35-Column Dummy Table</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f3f6fb;
+        color: #1f2937;
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: 24px;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        background: #ffffff;
+        border: 1px solid #d9e2ef;
+        border-radius: 12px;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      table {
+        width: max-content;
+        min-width: 2800px;
+        border-collapse: collapse;
+      }
+
+      thead th {
+        position: sticky;
+        top: 0;
+        background: #0f172a;
+        color: #fff;
+        text-align: left;
+        white-space: nowrap;
+        padding: 12px 10px;
+        font-size: 14px;
+      }
+
+      tbody td {
+        padding: 10px;
+        white-space: nowrap;
+        border-bottom: 1px solid #e5eaf2;
+        border-right: 1px solid #edf2f7;
+        font-size: 13px;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #f8fafc;
+      }
+
+      tbody tr:hover {
+        background: #eef4ff;
+      }
+
+      th:nth-child(1),
+      td:nth-child(1) {
+        position: sticky;
+        left: 0;
+        width: 90px;
+        min-width: 90px;
+        background: #ffffff;
+        z-index: 3;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        position: sticky;
+        left: 90px;
+        width: 120px;
+        min-width: 120px;
+        background: #ffffff;
+        z-index: 2;
+      }
+
+      th:nth-child(3),
+      td:nth-child(3) {
+        position: sticky;
+        left: 210px;
+        width: 120px;
+        min-width: 120px;
+        background: #ffffff;
+        z-index: 2;
+      }
+
+      thead th:nth-child(1),
+      thead th:nth-child(2),
+      thead th:nth-child(3) {
+        background: #0f172a;
+        z-index: 4;
+      }
+
+      tbody td:nth-child(1),
+      tbody td:nth-child(2),
+      tbody td:nth-child(3) {
+        box-shadow: 1px 0 0 #dbe3ef;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dummy Data Table with 35 Columns</h1>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Row</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+            <th>Column 7</th>
+            <th>Column 8</th>
+            <th>Column 9</th>
+            <th>Column 10</th>
+            <th>Column 11</th>
+            <th>Column 12</th>
+            <th>Column 13</th>
+            <th>Column 14</th>
+            <th>Column 15</th>
+            <th>Column 16</th>
+            <th>Column 17</th>
+            <th>Column 18</th>
+            <th>Column 19</th>
+            <th>Column 20</th>
+            <th>Column 21</th>
+            <th>Column 22</th>
+            <th>Column 23</th>
+            <th>Column 24</th>
+            <th>Column 25</th>
+            <th>Column 26</th>
+            <th>Column 27</th>
+            <th>Column 28</th>
+            <th>Column 29</th>
+            <th>Column 30</th>
+            <th>Column 31</th>
+            <th>Column 32</th>
+            <th>Column 33</th>
+            <th>Column 34</th>
+            <th>Column 35</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Alpha</td>
+            <td>Beta</td>
+            <td>Gamma</td>
+            <td>Delta</td>
+            <td>Epsilon</td>
+            <td>Zeta</td>
+            <td>Eta</td>
+            <td>Theta</td>
+            <td>Iota</td>
+            <td>Kappa</td>
+            <td>Lambda</td>
+            <td>Mu</td>
+            <td>Nu</td>
+            <td>Xi</td>
+            <td>Omicron</td>
+            <td>Pi</td>
+            <td>Rho</td>
+            <td>Sigma</td>
+            <td>Tau</td>
+            <td>Upsilon</td>
+            <td>Phi</td>
+            <td>Chi</td>
+            <td>Psi</td>
+            <td>Omega</td>
+            <td>Item 25</td>
+            <td>Item 26</td>
+            <td>Item 27</td>
+            <td>Item 28</td>
+            <td>Item 29</td>
+            <td>Item 30</td>
+            <td>Item 31</td>
+            <td>Item 32</td>
+            <td>Item 33</td>
+            <td>Item 34</td>
+            <td>Item 35</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>North</td>
+            <td>South</td>
+            <td>East</td>
+            <td>West</td>
+            <td>Central</td>
+            <td>Zone 6</td>
+            <td>Zone 7</td>
+            <td>Zone 8</td>
+            <td>Zone 9</td>
+            <td>Zone 10</td>
+            <td>Zone 11</td>
+            <td>Zone 12</td>
+            <td>Zone 13</td>
+            <td>Zone 14</td>
+            <td>Zone 15</td>
+            <td>Zone 16</td>
+            <td>Zone 17</td>
+            <td>Zone 18</td>
+            <td>Zone 19</td>
+            <td>Zone 20</td>
+            <td>Zone 21</td>
+            <td>Zone 22</td>
+            <td>Zone 23</td>
+            <td>Zone 24</td>
+            <td>Zone 25</td>
+            <td>Zone 26</td>
+            <td>Zone 27</td>
+            <td>Zone 28</td>
+            <td>Zone 29</td>
+            <td>Zone 30</td>
+            <td>Zone 31</td>
+            <td>Zone 32</td>
+            <td>Zone 33</td>
+            <td>Zone 34</td>
+            <td>Zone 35</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+            <td>A4</td>
+            <td>A5</td>
+            <td>A6</td>
+            <td>A7</td>
+            <td>A8</td>
+            <td>A9</td>
+            <td>A10</td>
+            <td>A11</td>
+            <td>A12</td>
+            <td>A13</td>
+            <td>A14</td>
+            <td>A15</td>
+            <td>A16</td>
+            <td>A17</td>
+            <td>A18</td>
+            <td>A19</td>
+            <td>A20</td>
+            <td>A21</td>
+            <td>A22</td>
+            <td>A23</td>
+            <td>A24</td>
+            <td>A25</td>
+            <td>A26</td>
+            <td>A27</td>
+            <td>A28</td>
+            <td>A29</td>
+            <td>A30</td>
+            <td>A31</td>
+            <td>A32</td>
+            <td>A33</td>
+            <td>A34</td>
+            <td>A35</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+            <td>Data 12</td>
+            <td>Data 13</td>
+            <td>Data 14</td>
+            <td>Data 15</td>
+            <td>Data 16</td>
+            <td>Data 17</td>
+            <td>Data 18</td>
+            <td>Data 19</td>
+            <td>Data 20</td>
+            <td>Data 21</td>
+            <td>Data 22</td>
+            <td>Data 23</td>
+            <td>Data 24</td>
+            <td>Data 25</td>
+            <td>Data 26</td>
+            <td>Data 27</td>
+            <td>Data 28</td>
+            <td>Data 29</td>
+            <td>Data 30</td>
+            <td>Data 31</td>
+            <td>Data 32</td>
+            <td>Data 33</td>
+            <td>Data 34</td>
+            <td>Data 35</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Sample 1</td>
+            <td>Sample 2</td>
+            <td>Sample 3</td>
+            <td>Sample 4</td>
+            <td>Sample 5</td>
+            <td>Sample 6</td>
+            <td>Sample 7</td>
+            <td>Sample 8</td>
+            <td>Sample 9</td>
+            <td>Sample 10</td>
+            <td>Sample 11</td>
+            <td>Sample 12</td>
+            <td>Sample 13</td>
+            <td>Sample 14</td>
+            <td>Sample 15</td>
+            <td>Sample 16</td>
+            <td>Sample 17</td>
+            <td>Sample 18</td>
+            <td>Sample 19</td>
+            <td>Sample 20</td>
+            <td>Sample 21</td>
+            <td>Sample 22</td>
+            <td>Sample 23</td>
+            <td>Sample 24</td>
+            <td>Sample 25</td>
+            <td>Sample 26</td>
+            <td>Sample 27</td>
+            <td>Sample 28</td>
+            <td>Sample 29</td>
+            <td>Sample 30</td>
+            <td>Sample 31</td>
+            <td>Sample 32</td>
+            <td>Sample 33</td>
+            <td>Sample 34</td>
+            <td>Sample 35</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
