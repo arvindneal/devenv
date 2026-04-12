@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Id - 444203 | Detail</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Top Tabs */
+        .tabs {
+            display: flex;
+            background: #f4c542;
+        }
+        .tab {
+            padding: 12px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid #e0b030;
+        }
+        .tab.active {
+            background: white;
+            border-bottom: 3px solid #f4c542;
+        }
+
+        /* Batch Header */
+        .batch-header {
+            background: linear-gradient(#f4c542, #e0b030);
+            color: black;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            background: #f4c542;
+            color: black;
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td.label {
+            font-weight: bold;
+            width: 180px;
+            background-color: #f9f9f9;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+        }
+
+        td.value {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+        }
+
+        /* Amount Summary Table */
+        .amount-table th {
+            background-color: #f4c542;
+            color: black;
+            text-align: center;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+        }
+
+        .amount-table td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            text-align: right;
+        }
+
+        .amount-table td.left {
+            text-align: left;
+        }
+
+        .negative {
+            color: #d32f2f;
+        }
+
+        .total-row {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        /* Footer Buttons */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 0 
