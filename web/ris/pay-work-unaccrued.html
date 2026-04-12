@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Process Accruals</title>
+    <title>Process Accruals - Unaccrued</title>
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -17,42 +17,6 @@
         background: white;
         border: 1px solid #ccc;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-      .main-header {
-        background: linear-gradient(#f4c542, #e0b030);
-        color: black;
-        padding: 12px 15px;
-        font-weight: bold;
-        font-size: 16px;
-      }
-      .summary-section {
-        padding: 15px;
-        border-bottom: 2px solid #f4c542;
-      }
-      .summary-title {
-        background: #f4c542;
-        color: black;
-        padding: 8px 15px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      table.summary-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-      }
-      .summary-table th,
-      .summary-table td {
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-      }
-      .summary-table th {
-        background-color: #f4c542;
-        text-align: center;
-        font-weight: bold;
-      }
-      .summary-table td.right {
-        text-align: right;
       }
       .tabs {
         background: #f4c542;
@@ -71,14 +35,6 @@
         background: white;
         border-bottom: 3px solid #f4c542;
       }
-      .detail-header {
-        background: #f4c542;
-        padding: 10px 15px;
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
       .selection-bar {
         background: #f4e8c0;
         padding: 10px 15px;
@@ -87,6 +43,14 @@
         gap: 25px;
         font-size: 13px;
       }
+      .detail-header {
+        background: #f4c542;
+        padding: 10px 15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
       .detail-table-wrapper {
         overflow-x: auto;
       }
@@ -94,7 +58,7 @@
         width: 100%;
         border-collapse: collapse;
         font-size: 13px;
-        min-width: 1400px;
+        min-width: 1450px;
       }
       .detail-table th {
         background-color: #f4c542;
@@ -111,9 +75,6 @@
         text-align: center;
         background-color: #fdf9e8;
       }
-      .detail-table td.left {
-        text-align: left;
-      }
       .checkbox-col {
         width: 40px;
         text-align: center;
@@ -122,93 +83,27 @@
         padding: 15px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 15px;
         border-top: 1px solid #ddd;
       }
-      button {
-        padding: 8px 18px;
+      button,
+      select {
+        padding: 8px 16px;
         background-color: #e0e0e0;
         border: 1px solid #999;
         cursor: pointer;
         font-weight: bold;
       }
-      button:hover {
+      button:hover,
+      select:hover {
         background-color: #d0d0d0;
-      }
-      .note {
-        text-align: center;
-        color: #555;
-        font-size: 12px;
-        padding: 10px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <!-- Main Header -->
-      <div class="main-header">Process Accruals</div>
-
-      <!-- Summary Section -->
-      <div class="summary-section">
-        <div class="summary-title">Summary</div>
-
-        <table class="summary-table">
-          <tr>
-            <td><strong>Batch Nbr.:</strong> 847659</td>
-            <td><strong>SCAC:</strong> CSRJ</td>
-            <td><strong>Acct Date:</strong> 12/2022</td>
-          </tr>
-        </table>
-
-        <table class="summary-table" style="margin-top: 12px">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Units</th>
-              <th>Claimed Amt.</th>
-              <th>Accrual Amt.</th>
-              <th>Settle Amt.</th>
-              <th>Impact Amt.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Accrued</strong></td>
-              <td class="right">0</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-            </tr>
-            <tr>
-              <td><strong>Unaccrued</strong></td>
-              <td class="right">0</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-            </tr>
-            <tr>
-              <td><strong>Reject</strong></td>
-              <td class="right">0</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-            </tr>
-            <tr style="font-weight: bold; background: #f0f0f0">
-              <td><strong>Total</strong></td>
-              <td class="right">0</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-              <td class="right">$0.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       <!-- Tabs -->
       <div class="tabs">
         <div class="tab">Accrued</div>
@@ -216,18 +111,21 @@
         <div class="tab">Reject</div>
       </div>
 
-      <!-- Detail Section -->
-      <div class="detail-header">
-        <div>No matching records</div>
-        <button>Reset</button>
-      </div>
-
+      <!-- Selection Bar -->
       <div class="selection-bar">
         <div><strong>Sel. Units:</strong> 0</div>
         <div><strong>Sel. Claimed Amt.:</strong> $0.00</div>
         <div><strong>Sel. Accrual Amt.:</strong> $0.00</div>
         <div><strong>Sel. Settle Amt.:</strong> $0.00</div>
         <div><strong>Sel. Impact Amt.:</strong> $0.00</div>
+        <div style="margin-left: auto">
+          <button>Reset</button>
+        </div>
+      </div>
+
+      <!-- Detail Header -->
+      <div class="detail-header">
+        <div>No matching records</div>
       </div>
 
       <!-- Detail Table -->
@@ -268,7 +166,10 @@
               <td></td>
               <td></td>
             </tr>
-            <!-- Empty rows to match screenshot -->
+            <!-- Empty rows to match the screenshot -->
+            <tr>
+              <td colspan="14"></td>
+            </tr>
             <tr>
               <td colspan="14"></td>
             </tr>
@@ -297,13 +198,20 @@
           <button>Reject</button>
           <button>Create Batch</button>
         </div>
+
+        <div style="display: flex; align-items: center; gap: 10px">
+          <label><strong>Contracts</strong></label>
+          <select>
+            <option value="">Select Contract</option>
+          </select>
+          <button>Apply Contract</button>
+        </div>
+
         <div>
           <button>Update Equip</button>
           <button>Accept Claim</button>
         </div>
       </div>
-
-      <div class="note">Fields denoted with ◆ and/or □ are required.</div>
     </div>
   </body>
 </html>

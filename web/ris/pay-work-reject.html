@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Accruals - Reject</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 1550px;
+        margin: 0 auto;
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .tabs {
+        background: #f4c542;
+        padding: 8px 15px 0;
+        display: flex;
+        gap: 4px;
+      }
+      .tab {
+        padding: 10px 25px;
+        background: #e0b030;
+        border: 1px solid #c39a00;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .tab.active {
+        background: white;
+        border-bottom: 3px solid #f4c542;
+      }
+      .top-bar {
+        background: #f4e8c0;
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 13px;
+      }
+      .radio-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .selection-bar {
+        background: #f4e8c0;
+        padding: 10px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        font-size: 13px;
+      }
+      .detail-header {
+        background: #f4c542;
+        padding: 10px 15px;
+        font-weight: bold;
+      }
+      .detail-table-wrapper {
+        overflow-x: auto;
+      }
+      table.detail-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        min-width: 1600px;
+      }
+      .detail-table th {
+        background-color: #f4c542;
+        color: black;
+        padding: 10px 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      .detail-table td {
+        padding: 10px 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+        background-color: #fdf9e8;
+      }
+      .checkbox-col {
+        width: 40px;
+        text-align: center;
+      }
+      .footer {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 15px;
+        border-top: 1px solid #ddd;
+      }
+      button,
+      select,
+      input[type="text"] {
+        padding: 8px 12px;
+        border: 1px solid #999;
+        background-color: #fff;
+      }
+      button {
+        background-color: #e0e0e0;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: #d0d0d0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab">Accrued</div>
+        <div class="tab">Unaccrued</div>
+        <div class="tab active">Reject</div>
+      </div>
+
+      <!-- Top Controls -->
+      <div class="top-bar">
+        <div class="radio-group">
+          <label><input type="radio" name="mode" checked /> Add to</label>
+          <label><input type="radio" name="mode" /> Change to</label>
+        </div>
+
+        <div>
+          <strong>Adjustment</strong><br />
+          <input type="text" style="width: 180px" />
+        </div>
+
+        <div>
+          <strong>Apply Criteria</strong><br />
+          <select style="width: 160px">
+            <option>Settle Switch</option>
+          </select>
+          <button>Apply</button>
+        </div>
+
+        <div style="margin-left: auto">
+          <button>Reset</button>
+        </div>
+      </div>
+
+      <!-- Selection Bar -->
+      <div class="selection-bar">
+        <div><strong>Sel. Units:</strong> 0</div>
+        <div><strong>Sel. Claimed Amt.:</strong> $0.00</div>
+        <div><strong>Sel. Accrual Amt.:</strong> $0.00</div>
+        <div><strong>Sel. Settle Amt.:</strong> $0.00</div>
+        <div><strong>Sel. Impact Amt.:</strong> $0.00</div>
+      </div>
+
+      <!-- Detail Header -->
+      <div class="detail-header">No matching records</div>
+
+      <!-- Detail Table -->
+      <div class="detail-table-wrapper">
+        <table class="detail-table">
+          <thead>
+            <tr>
+              <th class="checkbox-col"><input type="checkbox" checked /></th>
+              <th>Accrued<br />Switch</th>
+              <th>Claim Switch</th>
+              <th>Claim<br />Surcharge</th>
+              <th>Settle Switch</th>
+              <th>Settle<br />Surcharge</th>
+              <th>Impact<br />Amount</th>
+              <th>Issuing<br />Carrier</th>
+              <th>Document<br />Qualifier</th>
+              <th>Document<br />Reference #</th>
+              <th>Price<br />Type</th>
+              <th>Reject Reason</th>
+              <th>Equip Init</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="checkbox-col"><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Empty rows -->
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+            <tr>
+              <td colspan="13"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div>
+          <button>Accept Accrual</button>
+          <button>Reverse Reject</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px">
+          <strong>Reject Reason</strong>
+          <select style="width: 220px">
+            <option>Select Reason</option>
+          </select>
+          <strong>Other:</strong>
+          <input type="text" style="width: 200px" />
+          <button>Apply Reason</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px">
+          <label><strong>Contracts</strong></label>
+          <select>
+            <option value="">Select Contract</option>
+          </select>
+          <button>Apply Contract</button>
+        </div>
+
+        <div>
+          <button>Create Batch</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

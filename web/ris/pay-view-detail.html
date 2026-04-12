@@ -34,7 +34,7 @@
         border-bottom: 3px solid #f4c542;
       }
 
-      /* Header */
+      /* Batch Header */
       .batch-header {
         background: linear-gradient(#f4c542, #e0b030);
         color: black;
@@ -44,6 +44,7 @@
         font-size: 16px;
       }
 
+      /* Listing Header */
       .listing-header {
         background: #e8d8a0;
         padding: 8px 15px;
@@ -86,26 +87,6 @@
         height: 42px;
         background-color: #fdf9e8;
       }
-
-      /* Footer */
-      .footer {
-        padding: 25px 15px;
-        text-align: center;
-        background: #f9f9f9;
-        border-top: 1px solid #ddd;
-      }
-      button {
-        padding: 10px 28px;
-        margin: 0 8px;
-        border: 1px solid #999;
-        background-color: #e0e0e0;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 14px;
-      }
-      button:hover {
-        background-color: #d0d0d0;
-      }
     </style>
   </head>
   <body>
@@ -119,7 +100,7 @@
       <!-- Batch Header -->
       <div class="batch-header">Batch Id - 444203</div>
 
-      <!-- Listing Info -->
+      <!-- Listing records -->
       <div class="listing-header">Listing records 1 - 6 of 6</div>
 
       <!-- Detail Table -->
@@ -226,7 +207,7 @@
               <td class="left">SWRD</td>
               <td></td>
             </tr>
-            <!-- Empty rows to match the screenshot -->
+            <!-- Empty rows for visual match -->
             <tr class="empty-row">
               <td colspan="12"></td>
             </tr>
@@ -241,13 +222,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
-
-      <!-- Footer Buttons -->
-      <div class="footer">
-        <button>Close</button>
-        <button>Approve</button>
-        <button>Reject</button>
       </div>
     </div>
   </body>
