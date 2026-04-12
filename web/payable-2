@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch List</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1450px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th {
+            background-color: #f4c542;
+            color: black;
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        td {
+            padding: 8px 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        td.left {
+            text-align: left;
+        }
+        td.right {
+            text-align: right;
+        }
+        .negative {
+            color: #d32f2f;
+        }
+        .positive {
+            color: #006400;
+        }
+        .checkbox {
+            width: 30px;
+            text-align: center;
+        }
+        .action-link {
+            color: #0066cc;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        tr:nth-child(even) {
+            background-color: #fdf9e8;
+        }
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="checkbox"></th>
+                    <th>Work / Approve</th>
+                    <th>View</th>
+                    <th>Batch ID</th>
+                    <th>Carrier</th>
+                    <th>Claim Units</th>
+                    <th>Claim Amount</th>
+                    <th>Claim Type</th>
+                    <th>Status</th>
+                    <th>Accounting Date</th>
+                    <th>Description</th>
+                    <th>Matched Units</th>
+                    <th>Matched Amount</th>
+                    <th>Unmatched Units</th>
+                    <th>Unmatched Amount</th>
+                    <th>Assigned</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>444203</td>
+                    <td>BNSF</td>
+                    <td>6</td>
+                    <td class="negative">-$2,430.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>12/01/2017</td>
+                    <td>Adjustment batch for BI</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>6</td>
+                    <td class="negative">-$2,430.00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>447359</td>
+                    <td>NS</td>
+                    <td>11</td>
+                    <td class="negative">-$495.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>01/01/2018</td>
+                    <td>Adjustment batch for N</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>11</td>
+                    <td class="negative">-$495.00</td>
+                    <td>ASER100</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>450101</td>
+                    <td>NS</td>
+                    <td>22</td>
+                    <td class="negative">-$2,185.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>02/01/2018</td>
+                    <td>Adjustment batch for N</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>22</td>
+                    <td class="negative">-$2,185.00</td>
+                    <td>ASER100</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>461631</td>
+                    <td>NS</td>
+                    <td>9</td>
+                    <td class="negative">-$405.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>06/01/2018</td>
+                    <td>Adjustment batch for N</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>9</td>
+                    <td class="negative">-$405.00</td>
+                    <td>ASER100</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>464616</td>
+                    <td>NS</td>
+                    <td>2</td>
+                    <td class="negative">-$90.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>07/01/2018</td>
+                    <td>Adjustment batch for N</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>2</td>
+                    <td class="negative">-$90.00</td>
+                    <td>ASER100</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>468269</td>
+                    <td>NS</td>
+                    <td>14</td>
+                    <td class="negative">-$630.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>08/01/2018</td>
+                    <td>Adjustment batch for N</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>14</td>
+                    <td class="negative">-$630.00</td>
+                    <td>ASER100</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td><strong>Approve</strong></td>
+                    <td><span class="action-link">View</span></td>
+                    <td>471600</td>
+                    <td>NS</td>
+                    <td>53</td>
+                    <td class="negative">-$2,385.00</td>
+                    <td>Payable Adjust Verification</td>
+                    <td>Ready for approval</td>
+                    <td>09/01/2018</td>
+                    <td>Adjustment batch for N</td>
+                    <td>0</td>
+                    <td>$0.00</td>
+                    <td>53</td>
+                    <td class="negative">-$2,385.00</td>
+                    <td>ASER100</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></
