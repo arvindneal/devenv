@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Details</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            table-layout: fixed;
+        }
+        th {
+            background-color: #f4c542;
+            color: black;
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        td {
+            padding: 9px 8px;
+            border: 1px solid #ddd;
+            text-align: right;
+            white-space: nowrap;
+        }
+        td.left {
+            text-align: left;
+        }
+        .negative {
+            color: #d32f2f;
+        }
+        tr:nth-child(even) {
+            background-color: #fdf9e8;
+        }
+        .empty-row {
+            height: 42px;
+            background-color: #fdf9e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Accrued<br>Switch</th>
+                    <th>Claim<br>Switch</th>
+                    <th>Claim<br>Surcharge</th>
+                    <th>Settle<br>Switch</th>
+                    <th>Settle<br>Surcharge</th>
+                    <th>Impact<br>Amount</th>
+                    <th>Match<br>Type</th>
+                    <th>Issuing</th>
+                    <th>Qualifier</th>
+                    <th>Reference #</th>
+                    <th>Price<br>Type</th>
+                    <th>Orig<br>Except</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td class="left">Unaccrued</td>
+                    <td class="left">BNSF</td>
+                    <td class="left">BLBNSF</td>
+                    <td class="left">1</td>
+                    <td class="left">SWRD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td class="left">Unaccrued</td>
+                    <td class="left">BNSF</td>
+                    <td class="left">BLBNSF</td>
+                    <td class="left">1</td>
+                    <td class="left">SWRD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td class="left">Unaccrued</td>
+                    <td class="left">BNSF</td>
+                    <td class="left">BLBNSF</td>
+                    <td class="left">1</td>
+                    <td class="left">SWRD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td class="left">Unaccrued</td>
+                    <td class="left">BNSF</td>
+                    <td class="left">BLBNSF</td>
+                    <td class="left">1</td>
+                    <td class="left">SWRD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td class="left">Unaccrued</td>
+                    <td class="left">BNSF</td>
+                    <td class="left">BLBNSF</td>
+                    <td class="left">1</td>
+                    <td class="left">SWRD</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td>$0.00</td>
+                    <td class="negative">-$405.00</td>
+                    <td class="left">Unaccrued</td>
+                    <td class="left">BNSF</td>
+                    <td class="left">BLBNSF</td>
+                    <td class="left">1</td>
+                    <td class="left">SWRD</td>
+                    <td></td>
+                </tr>
+                <!-- Empty rows to match the screenshot -->
+                <tr class="empty-row"><td colspan="12"></td></tr>
+                <tr class="empty-row"><td colspan="12"></td></tr>
+                <tr class="empty-row"><td colspan="12"></td></tr>
+                <tr class="empty-row"><td colspan="12"></td></tr>
+                <tr class="empty-row"><td colspan="12"></td></tr>
+                <tr class="empty-row"><td colspan="12"></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
