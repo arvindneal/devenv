@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Accruals</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1450px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .main-header {
+            background: linear-gradient(#f4c542, #e0b030);
+            color: black;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .summary-section {
+            padding: 15px;
+            border-bottom: 2px solid #f4c542;
+        }
+        .summary-title {
+            background: #f4c542;
+            color: black;
+            padding: 6px 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        table.summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .summary-table th, .summary-table td {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+        }
+        .summary-table th {
+            background-color: #f4c542;
+            font-weight: bold;
+            text-align: center;
+        }
+        .summary-table td {
+            text-align: left;
+        }
+        .summary-table td.right {
+            text-align: right;
+        }
+        .negative {
+            color: #d32f2f;
+        }
+        .tabs {
+            background: #f4c542;
+            padding: 8px 15px 0;
+            display: flex;
+            gap: 4px;
+        }
+        .tab {
+            padding: 10px 25px;
+            background: #e0b030;
+            border: 1px solid #c39a00;
+            font-weight: bold;
+            cursor: pointer;
+            border-bottom: none;
+        }
+        .tab.active {
+            background: white;
+            border-bottom: 3px solid #f4c542;
+        }
+        .detail-header {
+            background: #f4c542;
+            padding: 8px 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .selection-bar {
+            background: #f4e8c0;
+            padding: 10px 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 13px;
+        }
+        table.detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
