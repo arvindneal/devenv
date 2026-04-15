@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>35-Column Dummy Table</title>
     <style>
+      :root {
+        --pinned-col-1: 90px;
+        --pinned-col-2: 120px;
+        --pinned-col-3: 120px;
+        --pinned-width: 330px;
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -67,8 +74,8 @@
       td:nth-child(1) {
         position: sticky;
         left: 0;
-        width: 90px;
-        min-width: 90px;
+        width: var(--pinned-col-1);
+        min-width: var(--pinned-col-1);
         background: #ffffff;
         z-index: 3;
       }
@@ -76,9 +83,9 @@
       th:nth-child(2),
       td:nth-child(2) {
         position: sticky;
-        left: 90px;
-        width: 120px;
-        min-width: 120px;
+        left: var(--pinned-col-1);
+        width: var(--pinned-col-2);
+        min-width: var(--pinned-col-2);
         background: #ffffff;
         z-index: 2;
       }
@@ -86,9 +93,9 @@
       th:nth-child(3),
       td:nth-child(3) {
         position: sticky;
-        left: 210px;
-        width: 120px;
-        min-width: 120px;
+        left: calc(var(--pinned-col-1) + var(--pinned-col-2));
+        width: var(--pinned-col-3);
+        min-width: var(--pinned-col-3);
         background: #ffffff;
         z-index: 2;
       }
@@ -346,5 +353,25 @@
         </tbody>
       </table>
     </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const tableWrap = document.querySelector(".table-wrap");
+
+        if (!tableWrap) {
+          return;
+        }
+
+        const pinnedWidth = Number.parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--pinned-width",
+          ),
+        );
+
+        if (!Number.isNaN(pinnedWidth)) {
+          tableWrap.scrollLeft = pinnedWidth;
+        }
+      });
+    </script>
   </body>
 </html>

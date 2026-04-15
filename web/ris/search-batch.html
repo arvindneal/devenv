@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Batch</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(#f4c542, #e0b030);
+        color: black;
+        padding: 12px 20px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .section-title {
+        background: #f4c542;
+        color: black;
+        padding: 8px 15px;
+        font-weight: bold;
+      }
+      .form-container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+      .form-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      label {
+        font-weight: bold;
+        min-width: 110px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .required::after {
+        content: "◆";
+        color: #f4c542;
+      }
+      input[type="text"],
+      select {
+        padding: 8px 10px;
+        border: 1px solid #999;
+        border-radius: 3px;
+        flex: 1;
+      }
+      .date-range {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .calendar-icon {
+        background: #f0f0f0;
+        border: 1px solid #999;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+      .footer {
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+      button {
+        padding: 10px 25px;
+        margin: 0 10px;
+        border: 1px solid #999;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: #d0d0d0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main Header -->
+      <div class="header">Search Batch</div>
+
+      <!-- Search Criteria -->
+      <div class="section-title">Search Criteria</div>
+
+      <div class="form-container">
+        <!-- Left Column -->
+        <div>
+          <div class="form-group">
+            <label class="required">SCAC</label>
+            <input type="text" style="width: 150px" />
+          </div>
+
+          <div class="form-group">
+            <label>Claim Type</label>
+            <select style="width: 200px">
+              <option>Select...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Claim Amt.</label>
+            <input type="text" style="width: 120px" />
+            <span>to</span>
+            <input type="text" style="width: 120px" />
+          </div>
+
+          <div class="form-group">
+            <label>Accounting Date</label>
+            <input type="text" style="width: 120px" />
+            <span class="calendar-icon">📅</span>
+            <span>to</span>
+            <input type="text" style="width: 120px" />
+            <span class="calendar-icon">📅</span>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <div class="form-group">
+            <label class="required">Batch Number</label>
+            <input type="text" style="width: 180px" />
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+            <select style="width: 180px">
+              <option>Select...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Settlement Amt.</label>
+            <input type="text" style="width: 120px" />
+            <span>to</span>
+            <input type="text" style="width: 120px" />
+          </div>
+
+          <div class="form-group">
+            <label>Interchange Date</label>
+            <input type="text" style="width: 120px" />
+            <span class="calendar-icon">📅</span>
+            <span>to</span>
+            <input type="text" style="width: 120px" />
+            <span class="calendar-icon">📅</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="footer">
+        <button>Search</button>
+        <button>Clear</button>
+      </div>
+    </div>
+  </body>
+</html>
