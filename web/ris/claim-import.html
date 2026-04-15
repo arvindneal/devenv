@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import Contract Switch Claim</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(#f4c542, #e0b030);
+        color: black;
+        padding: 12px 20px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .section-header {
+        background: #f4c542;
+        color: black;
+        padding: 8px 15px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .form-group {
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      label {
+        font-weight: bold;
+        min-width: 120px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .required::after {
+        content: "◆";
+        color: #f4c542;
+        margin-left: 5px;
+      }
+      input[type="text"],
+      select {
+        flex: 1;
+        padding: 8px 10px;
+        border: 1px solid #999;
+        border-radius: 3px;
+      }
+      .calendar-icon {
+        background: #f0f0f0;
+        border: 1px solid #999;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+      .file-section {
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      button {
+        padding: 8px 20px;
+        margin: 5px;
+        border: 1px solid #999;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: #d0d0d0;
+      }
+      .footer {
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main Header -->
+      <div class="header">Import Contract Switch Claim</div>
+
+      <!-- Contract Information -->
+      <div class="section-header">Contract Information</div>
+      <div class="form-group">
+        <label class="required">Contract:</label>
+        <select>
+          <option>Select ...</option>
+        </select>
+      </div>
+
+      <!-- Batch Information -->
+      <div class="section-header">Batch Information</div>
+
+      <div class="form-group">
+        <label class="required">Account:</label>
+        <input type="text" style="flex: 1" />
+        <span class="calendar-icon">📅</span>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Date:</label>
+        <input type="text" style="flex: 1" />
+      </div>
+
+      <div class="form-group">
+        <label>Description:</label>
+        <input type="text" style="flex: 1" />
+      </div>
+
+      <!-- File Upload -->
+      <div class="file-section">
+        <label class="required">File:</label>
+        <button>Choose File</button>
+        <span>No file chosen</span>
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="footer">
+        <button>Close</button>
+        <button>Import</button>
+      </div>
+    </div>
+  </body>
+</html>
