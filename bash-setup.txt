@@ -3,8 +3,11 @@ alias sr='source'
 alias hs='history'
 alias al='alias'
 sr '/c/Program Files/Git/etc/profile.d/git-prompt.sh'
-
-export PS1="\[\033[01;34m\]\W\[\033[01;32m\]\$(__git_ps1 ' (%s)')\[\033[00m\] \$ "
+# for zsh use
+#setopt PROMPT_SUBST
+#PROMPT='%F{blue}%1~%F{green}$(__git_ps1 " (%s)")%f %# '
+# bash use:
+#export PS1="\[\033[01;34m\]\W\[\033[01;32m\]\$(__git_ps1 ' (%s)')\[\033[00m\] \$ "
 
 # Git commit-as alias for Arvind
 # Use: gca -m "message" [other git commit flags]
