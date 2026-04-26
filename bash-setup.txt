@@ -1,24 +1,53 @@
 source ~/../etc/profile.d/git-prompt.sh
-export PS1="\W\$(__git_ps1 ' (%s)') \$ "
+alias sr='source'
+alias hs='history'
+alias al='alias'
+sr '/c/Program Files/Git/etc/profile.d/git-prompt.sh'
+
+export PS1="\[\033[01;34m\]\W\[\033[01;32m\]\$(__git_ps1 ' (%s)')\[\033[00m\] \$ "
 
 # Git commit-as alias for Arvind
 # Use: gca -m "message" [other git commit flags]
 gcp() {
   git -c user.name="Arvin" -c user.email="arvin-noreply@github.com" commit "$@"
 }
-alias sr='source'
+alias xgrep='grep --exclude-dir=node_modules' 
+
 alias ca='cd /c/Users/arvind.kumar23/root/dev'
-alias zgrep='grep --exclude-dir=node_modules'
+
 alias ns='npm start'
 alias ni='npm install'
 alias nb='npm run build'
 alias ng18='npx @angular/cli@18'
-alias ng='ng18'
+alias ng21='npx @angular/cli@21'
+alias ng='ng21'
+alias rmc='rm -rf ./node_modules'
+
+alias ns='npm start'
+alias ni='npm install'
+alias nb='npm run build'
+alias ng18='npx @angular/cli@18'
+alias ng21='npx @angular/cli@21'
+alias ng='ng21'
+alias rmc='rm -rf ./node_modules'
+alias ngc='ng generate component --type=component'
 alias gk='git checkout'
+alias gc='git checkout --'
+alias gu='git reset HEAD'
 alias gr='git reset --hard'
 alias gs='git status'
 alias gl='git log'
+alias gp='git pull'
+alias gb='git branch'
+alias ga='git add'
+alias gb='git branch'
+alias cm='git commit -m'
+alias acp='cp ../auth.guard.ts ./src/'
+alias gac='git checkout -- src/auth.guard.ts'
 
+alias op='code . -r'
+alias cl='rm -rf dist node_modules'
+alias npp="'C:/ProgramData/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 alias npxs='npx eslint'
 alias op='code . -r'
 alias ex='cd /c/Users/arvind.kumar23/root/dev/ang/ex'
