@@ -41,3 +41,117 @@ https://www.youtube.com/watch?v=hMPC6q7HIuQ&list=PLovN13bqAx7ALeYQ-h4lhxa8PymM2b
 
 Exercises: Events Introduction - DOM In Depth
 https://www.youtube.com/watch?v=PF6zc9ESxZI
+
+Key advanced topic areas in Angular 21
+the main areas are:(https://dev.to/koolkamalkishor/angular-advanced-qa-a-comprehensive-guide-pbg)
+Change detection & performance 
+
+Default vs OnPush
+
+trackBy in *ngFor
+
+Lazy loading modules/routes
+
+Tree shaking, bundle optimization, virtual scroll.(https://frontendmasters.com/courses/advanced-angular/)
+
+Signals & state management
+
+Angular Signals API (signal vs observable)
+
+local component state with signals
+
+app‑wide state with SignalStore, NgRx, and hybrid patterns.(https://www.linkedin.com/posts/kundan-k-534676bb_angular-frontend-webdevelopment-share-7429468683011420161--6Hu/)
+
+Dependency injection & application architecture
+
+DI hierarchy, providers in modules vs components
+
+standalone components & modern bootstrapping
+
+feature, shared, and core modules (for mixed setups).(https://dev.to/koolkamalkishor/angular-advanced-qa-a-comprehensive-guide-pbg)
+
+Advanced RxJS usage
+
+switchMap vs mergeMap vs concatMap vs exhaustMap
+
+canceling HTTP requests, avoiding memory leaks
+
+Subject, BehaviorSubject, ReplaySubject and composition patterns.
+
+Routing, guards, and security
+
+complex routing, lazy routes, route guards
+
+role‑based access control (RBAC)
+
+HttpInterceptors for auth, logging, and error handling.
+
+Testing and enterprise concerns
+
+harnesses and DOM‑interaction tests
+
+SSR (Angular Universal) vs CSR
+
+micro‑frontend architecture and modularization.
+
+Strong resources to go deep
+1) Advanced Angular courses
+Frontend Masters – Advanced Angular: Performance & Enterprise State
+
+URL: [Advanced Angular: Performance & Enterprise State]
+
+Focus: cutting‑edge optimization, Signals with SignalStore, NgRx at scale, and serious testing strategies.
+
+Very good if you want senior‑level performance and state‑architecture competence for Angular 21.
+
+Coursera – Advanced Angular Topics
+
+URL: [Advanced Angular Topics]
+
+Covers advanced routing, forms, directives, and more structured topics suitable as a step up from beginner courses.
+
+CodeSignal Learn – Advanced Angular Concepts
+
+URL: [Advanced Angular Concepts]
+
+Focus: deeper forms, directives, i18n, and basic state‑management techniques—nice for hands‑on exercises.
+
+2) Angular 21 full-course outlines (to see the full landscape)
+Angular 21 complete course content (Ashok IT)
+
+PDF outline: [Angular 21 – Complete Course Content]
+
+Shows a modern curriculum from basics to advanced, including:
+
+Signals and state patterns (Module 19)
+
+Performance optimization (Module 20)
+
+Authentication, interceptors, and architecture modules.
+
+Useful as a checklist of what “advanced Angular 21” should cover.
+
+Jegan’s Angular 21 3‑day outline
+
+PDF: [Angular 21 outline]
+
+Short, intensive outline that touches performance, forms, routing, DI, and HTTP—good to see what a fast-track advanced course includes.
+
+3) Advanced topics & interview question sets
+Angular University – advanced topics video list
+
+Blog: [A Video List on Several Advanced Angular Topics]
+
+Curated videos on topics like change detection, view encapsulation, advanced forms, and library design—good to pick specific areas and go deep.
+
+“Top 20 Advanced Angular Interview Topics (2026 Edition)” – LinkedIn (https://www.linkedin.com/posts/kundan-k-534676bb_angular-frontend-webdevelopment-share-7429468683011420161--6Hu/)
+
+
+Books:
+https://angular-enterprise.com/en/ngpost/resources/books/
+https://codecraft.tv/courses/angular/quickstart/overview/
+
+youtube:
+https://www.youtube.com/watch?v=PMkdiZU6kVc&list=PL-TLnxxt_AVGz9wRWkCajUkcH5zfa9JKP
+
+
