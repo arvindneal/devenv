@@ -3,3 +3,191 @@ https://spin.atomicobject.com/type-safe-rest-api/
 https://github.com/jordancn/json-schema-typecript-rest-api-helpers
 atomic design
 https://atomicdesign.bradfrost.com/chapter-1/
+
+https://openapi-ts.dev/openapi-fetch/
+
+
+best practice on using typescript with rest api json objects
+To handle REST API JSON objects in TypeScript optimally, you must achieve runtime data validation while maintaining 
+strict static type definitions. Because TypeScript types disappear at compile time, treating an unknown API 
+response as a trusted type without validating it can lead to uncaught runtime crashes if the backend payload 
+changes unexpectedly.
+
+1. Validate at the Network Edge (Avoid as Type)
+Using type assertions like response.json() as User overrides TypeScript's type checker, tricking it into trusting 
+unvalidated external data. Instead, use a runtime validation library like Zod.
+
+Define a runtime schema: Let the library handle structural verification.Infer static types: Automatically generate types directly from that schema to avoid writing code twice.
+import { z } from 'zod';
+
+// 1. Define the structural runtime schema
+export const UserSchema = z.object({
+  id: z.string().uuid(),
+  name: z.string(),
+  email: z.string().email(),
+  role: z.enum(['admin', 'user']),
+  createdAt: z.string().transform((str) => new Date(str)), // Automatically formats JSON strings
+});
+
+// 2. Infer the TypeScript type from the Zod schema
+export type User = z.infer<typeof UserSchema>;
+
+
+
+https://dev.to/young_gao/building-a-type-safe-rest-api-with-zod-express-and-typescript-from-validation-to-openapi-docs-3agj
+
+2. Isolate Fetch Logic into Type-Safe Wrappers
+Do not sprinkle raw fetch calls across UI components. Centralize them in dedicated, reusable API service modules that enforce incoming and outgoing data structures.
+export async function fetchUser(userId: string): Promise<User> {
+  const response = await fetch(`https://example.com{userId}`);
+  
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  
+  const rawData = await response.json();
+  
+  // 3. Parse and validate the response against the schema at runtime
+  return UserSchema.parse(rawData); 
+}
+
+
+3. Handle unknown Over any for Raw Payloads
+When building generic utility functions, interceptors, or handling unexpected errors, never type incoming JSON payloads 
+as any. Use unknown to force your code to manually perform a check before accessing nested fields.
+
+// Good practice for a generic network error parser
+export function parseApiError(errorPayload: unknown): string {
+  if (
+    errorPayload && 
+    typeof errorPayload === 'object' && 
+    'message' in errorPayload && 
+    typeof (errorPayload as any).message === 'string'
+  ) {
+    return (errorPayload as { message: string }).message;
+  }
+  return 'An unexpected network error occurred.';
+}
+
+4. Separate Request Body Types from Response Types
+Do not reuse a single data interface for every lifecycle stage of an object. An object coming from a GET request usually contains 
+metadata fields (like server-side timestamps and auto-incrementing IDs) that a client-side POST request payload should not 
+submit. Use utility types like Omit or Pick to quickly generate variations.
+
+// The complete profile object coming from GET /users/1
+export interface UserProfile {
+  id: string;
+  name: string;
+  avatarUrl: string;
+  createdAt: string;
+}
+
+// The exact data structure needed for PUT /users/1 (Omits read-only server fields)
+export type UpdateUserProfileDto = Omit<UserProfile, 'id' | 'createdAt'>;
+
+5. Standardize Wrapper Responses
+API payloads usually come enveloped inside standard top-level JSON fields (like data, error, or pagination arrays). Use TypeScript 
+generics (<T>) to type these envelopes safely across different endpoints.
+export interface ApiResponseEnvelope<T> {
+  data: T;
+  meta: {
+    timestamp: string;
+    requestId: string;
+  };
+}
+
+export interface PaginatedEnvelope<T> {
+  items: T[];
+  totalCount: number;
+  currentPage: number;
+}
+
+
+6. Automate Definitions with OpenAPI / Swagger
+If your backend team already maintains documentation using OpenAPI, do not manually copy-paste JSON formats into 
+your frontend types. Use command-line utilities to generate everything straight from the spec file.
+https://www.youtube.com/watch?v=qgyCB39hlRM&t=50s
+https://www.youtube.com/watch?v=M3kTvIgj__4
+
+How to build a REST API with TypeScript in Node.js
+https://coreui.io/answers/how-to-build-a-rest-api-with-typescript-in-nodejs/
+
+
+
+🚀 ** Master Angular – 50 Essential Topics to Elevate Your Frontend Skills ** 🎯
+
+Whether you're just starting out or aiming to become an Angular expert, here's a curated list of 50 must-know Angular topics every developer should explore:
+
+✅ Core Concepts
+
+1. Angular Architecture Overview
+2. Components & Templates
+3. Modules (NgModules)
+4. Data Binding – Interpolation, Property, Event, Two-Way
+5. Directives – Structural & Attribute
+6. Pipes (Built-in & Custom)
+7. Services & Dependency Injection
+8. Lifecycle Hooks
+9. Observables & RxJS Basics
+10. Routing & Navigation
+
+✅ Advanced Concepts 
+
+11. Route Guards
+12. Lazy Loading Modules
+13. Reactive Forms vs Template-driven Forms
+14. Form Validation & Custom Validators
+15. ViewChild, ContentChild, and ViewContainerRef
+16. Change Detection Strategies
+17. Dynamic Component Loading
+18. Content Projection
+19. HttpClient & API Integration
+20. Interceptors (Request/Response)
+
+✅ Performance & Optimization
+
+21. OnPush Strategy
+22. TrackBy in ngFor
+23. Debounce & Throttle in Angular
+24. Bundle Optimization (Tree Shaking, Lazy Loading)
+25. Preloading Strategies
+26. Web Workers in Angular
+27. PWA Support in Angular
+
+✅ Testing & Debugging 
+
+28. Unit Testing with Jasmine & Karma
+29. Component Testing with TestBed
+30. E2E Testing with Protractor/Cypress
+31. Debugging with Augury
+
+✅ State Management 
+
+32. @Input() and @Output()
+33. Service-based State Management
+34. RxJS Subjects & BehaviorSubjects
+35. NgRx (Store, Effects, Actions, Reducers)
+
+✅ Tooling & Ecosystem 
+
+36. Angular CLI Deep Dive
+37. Workspace Configuration
+38. ESLint & Prettier Setup
+39. Angular Schematics
+40. Internationalization (i18n)
+
+✅ UI & Styling 
+
+41. Angular Material
+42. Custom Theme Creation
+43. Responsive Design with FlexLayout/Grid
+44. Animations in Angular
+
+✅ Best Practices 
+
+45. Folder Structure & Modular Design
+46. Reusable Components & Libraries
+47. Handling Subscriptions Properly
+48. Secure Angular Apps (XSS, CSRF)
+49. Code Splitting & Lazy Services
+50. Continuous Integration with Angular Apps
