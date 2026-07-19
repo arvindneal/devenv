@@ -25,3 +25,5 @@ Here are some differences worth noting between the two solutions:
 | Request cancellation (see code below) | Requires AbortController | Built-in method |
 | Response transformation | Manual | Automatic |
 | Platform support | Once browser-only but now available in Node.js v18+ | Browser and Node.js |
+
+## Swagger TypeScript API
