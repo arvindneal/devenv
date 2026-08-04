@@ -80,44 +80,6 @@ This movement safely stretches and strengthens the hamstrings while teaching you
 
 To help me tailor these movements further, when is your stiffness at its worst (e.g., right when waking up, or after sitting at a desk/driving)? Also, let me know if you have any knee discomfort that might affect squatting.
 
-[1] [https://www.youtube.com](https://www.youtube.com/watch?v=HXSZHLGNSyU&t=600)
-[2] [https://www.facebook.com](https://www.facebook.com/MondragonChiropractic/posts/if-you-sit-all-day-this-will-expose-how-stiff-you-really-arerollers-oil-products/1382525510344581/)
-[3] [https://stlspinecare.com](https://stlspinecare.com/blog/top-stretches-for-sciatica-pain-relief/)
-[4] [https://www.hss.edu](https://www.hss.edu/health-library/move-better/posterior-chain-strengthening)
-[5] [https://www.gxmmat.us](https://www.gxmmat.us/blogs/daily-news/the-back-of-the-leg-blueprint-how-to-actually-build-defined-hamstrings)
-[6] [https://www.youtube.com](https://www.youtube.com/shorts/tVdONtSv0wQ)
-[7] [https://mainstaymedical.com](https://mainstaymedical.com/exercises-to-strengthen-lower-back/)
-[8] [https://int.livhospital.com](https://int.livhospital.com/essential-8-workouts-to-help-back-pain-prevention-exercises/)
-[9] [https://uprightathlete.com](https://uprightathlete.com/library_newsfeed_1356/)
-[10] [https://www.creativechiro.co.uk](https://www.creativechiro.co.uk/chiropractor-articles-norfolk/getting-to-the-core-of-the-problem)
-[11] [https://www.mayoclinic.org](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/back-pain/art-20546859)
-[12] [https://painspecialistsaustralia.com.au](https://painspecialistsaustralia.com.au/blog/best-stretches-for-back-pain-relief)
-[13] [https://drsirota.com](https://drsirota.com/best-exercises-for-lower-back-pain/)
-[14] [https://www.instagram.com](https://www.instagram.com/reel/DL7gIvgvSdV/)
-[15] [https://www.youtube.com](https://www.youtube.com/watch?v=wztJZHaNF4Q&t=209)
-[16] [https://www.youtube.com](https://www.youtube.com/watch?v=vP52BSi5KkU&t=420)
-[17] [https://raymondlaufmpc.com](https://raymondlaufmpc.com/blogs/10-best-exercises-for-lower-back-pain-relief)
-[18] [https://thelondonroadclinic.com](https://thelondonroadclinic.com/quadriceps-strengthening-exercises-knee-pain-guide/)
-[19] [https://www.outsideonline.com](https://www.outsideonline.com/health/training-performance/back-pain-from-sitting-stretches/)
-[20] [https://activtherapy.com.au](https://activtherapy.com.au/blog/7-best-gentle-tummy-exercises-for-mature-blokes)
-[21] [https://www.youtube.com](https://www.youtube.com/watch?v=2daigSBkx68&t=393)
-[22] [https://www.eosfitness.com](https://www.eosfitness.com/blog/10-low-impact-workouts-that-build-strength)
-[23] [https://www.surreyphysio.co.uk](https://www.surreyphysio.co.uk/top-5/best-5-exercises-to-reduce-your-knee-pain/)
-[24] [https://www.leagendersfitness.com](https://www.leagendersfitness.com/news/easy-office-exercises-to-undo-the-damage-of-sitting)
-[25] [https://www.hingehealth.com](https://www.hingehealth.com/resources/articles/lower-back-pain-when-squatting/)
-[26] [https://www.youtube.com](https://www.youtube.com/watch?v=b_9sNDhKvfo&t=486)
-[27] [https://www.bodyspec.com](https://www.bodyspec.com/blog/post/13_best_athome_exercises_for_back_pain_relief)
-[28] [https://www.instagram.com](https://www.instagram.com/reel/CwLsG-0JM-K/)
-[29] [https://www.youtube.com](https://www.youtube.com/watch?v=CkOBzTJoDQU&t=32)
-[30] [https://f45training.com](https://f45training.com/article/prevent-lower-back-pain/)
-[31] [https://www.cristchiropractic.com](https://www.cristchiropractic.com/how-to-decompress-spine)
-[32] [https://www.instagram.com](https://www.instagram.com/reel/DaN-8pNz5sX/)
-[33] [https://brehabdxb.com](https://brehabdxb.com/blogs/lower-back-strain-stretches-relief/)
-[34] [https://stretchmedstudios.com](https://stretchmedstudios.com/dynamic-stretching-legs-exercises/)
-[35] [https://www.bubsnaturals.com](https://www.bubsnaturals.com/blogs/workouts-and-training/mastering-strength-how-to-workout-your-back-at-home-without-equipment)
-[36] [https://resolve-chiro.com](https://resolve-chiro.com/best-exercises-for-sciatica-relief/)
-
-
 ## 5 Science-Backed Exercises That Reverse Aging
 https://www.youtube.com/watch?v=mim6KgNDDb0
 1. Hang
@@ -132,7 +94,6 @@ https://www.youtube.com/watch?v=2AWWezRz3cI
 
 ## Shredded at 72: The Simple Routine Behind His Insane Strength
 https://www.youtube.com/watch?v=hPoNH4DUd4k
-
 ## These Ancient Exercises Transform the Human Body.
 https://www.youtube.com/watch?v=LGJlHdfGgN8
 
@@ -146,3 +107,16 @@ https://www.youtube.com/watch?v=wOBXTDxrGWo
 ## Shaolin Monk: These 6 Isometric Strength Exercises
 https://www.youtube.com/watch?v=zJCARfbvHbQ
 
+## Ronaldo core exercises
+https://www.youtube.com/watch?v=50Xdg83zIPk
+
+https://www.youtube.com/watch?v=22htlTMaOc8
+https://www.youtube.com/watch?v=QvbpeETBoGg
+Cristiano Ronaldo Shows his Workout Routine!
+
+10 Minutes Of Cristiano Ronaldo Giving Life Changing Advice
+https://www.youtube.com/watch?v=0V_g1zNhbyA
+Train Like Ronaldo
+https://www.youtube.com/watch?v=0V_g1zNhbyA
+Why Every Teammate Fears Cristiano Ronaldo's Mentality
+https://www.youtube.com/watch?v=n7wzXys153U
